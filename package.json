@@ -1,45 +1,37 @@
 {
   "name": "habibi-codex-baileys",
-  "version": "1.0.0",
-  "description": "Wrapper @whiskeysockets/baileys v7 dengan dukungan interactiveMessage, nativeFlow button, dan listMessage langsung via API yang mudah.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "version": "1.1.0",
+  "description": "Wrapper @whiskeysockets/baileys v7 dengan dukungan interactiveMessage, nativeFlow button, listMessage, plus helper QR & pairing code",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    }
-  },
   "files": [
-    "lib/**"
+    "src/**",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch",
-    "prepare": "npm run build"
+    "prepare": "tsc"
   },
-  "keywords": [
-    "whatsapp",
-    "baileys",
-    "bot",
-    "interactive",
-    "nativeflow",
-    "button",
-    "multi-device"
-  ],
-  "author": "habibi-codex",
+  "keywords": ["whatsapp","baileys","bot","interactive","nativeflow","button","multi-device"],
+  "author": "habibih-codex-dev",
   "license": "MIT",
-  "engines": {
-    "node": ">=20.0.0"
-  },
+  "engines": { "node": ">=20.0.0" },
   "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
+    "@hapi/boom": "^10.0.1"
+  },
     "@whiskeysockets/baileys": "^7.0.0-rc13"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
+    "@whiskeysockets/baileys": ">=6.7.0"
+  },
+  "optionalDependencies": {
+    "qrcode-terminal": "^0.12.0"
+  }
     "@whiskeysockets/baileys": ">=6.7.0"
   }
 }
