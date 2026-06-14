@@ -13,15 +13,13 @@
     "build": "tsc",
     "prepare": "tsc"
   },
-  "keywords": ["whatsapp","baileys","bot","interactive","nativeflow","button","multi-device"],
+  "keywords": ["whatsapp","baileys","bot","interactive","nativeflow","button","pairing","qr","multi-device"],
   "author": "habibih-codex-dev",
   "license": "MIT",
   "engines": { "node": ">=20.0.0" },
   "dependencies": {
     "@whiskeysockets/baileys": "^7.0.0-rc13",
     "@hapi/boom": "^10.0.1"
-  },
-    "@whiskeysockets/baileys": "^7.0.0-rc13"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
@@ -31,7 +29,5 @@
   },
   "optionalDependencies": {
     "qrcode-terminal": "^0.12.0"
-  }
-    "@whiskeysockets/baileys": ">=6.7.0"
   }
 }
