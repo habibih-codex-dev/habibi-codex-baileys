@@ -12,6 +12,7 @@ export * from '@whiskeysockets/baileys'
 export { sendInteractive } from './interactive.js'
 export { sendListMessage } from './list.js'
 export { parseButtonResponse, isFromMe, isSystemMessage } from './response.js'
+export { connectWithQR, connectWithPairing } from './auth.js'
 
 // Export types
 export type {
@@ -22,4 +23,7 @@ export type {
   ListSection,
   SendListOptions,
   ButtonResponseResult,
+} from './types.js'
+
+export type { ConnectOptions } from './auth.js'
 } from './types.js'
