@@ -84,6 +84,42 @@ async function kirimMenu(sock, jid) {
 
 ---
 
+## 🔐 Koneksi & Login
+
+### `connectWithQR(options)`
+
+Connect ke WhatsApp via QR Code — otomatis tampil di terminal.
+
+```js
+import { connectWithQR } from 'habibi-codex-baileys'
+
+const sock = await connectWithQR({
+  authFolder: './auth',
+  onConnected: () => console.log('✅ Bot online!'),
+  onQR: (qr) => console.log('Scan QR ini'),  // opsional
+})
+```
+
+### `connectWithPairing(phoneNumber, options)`
+
+Connect via Pairing Code (8 digit, tanpa scan QR).
+
+```js
+import { connectWithPairing } from 'habibi-codex-baileys'
+
+const sock = await connectWithPairing('628123456789', {
+  authFolder: './auth',
+  onPairingCode: (code) => console.log('Kode:', code),  // contoh: ABCD-EFGH
+  onConnected: () => console.log('✅ Bot online!'),
+})
+```
+
+Di HP: **WhatsApp → Perangkat Tertaut → Tautkan dengan nomor telepon → masukkan kode**
+
+Kedua fungsi punya **auto-reconnect** bawaan dan otomatis pakai versi Baileys terbaru.
+
+---
+
 ## 📖 API Reference
 
 ### `sendInteractive(sock, jid, options)`
