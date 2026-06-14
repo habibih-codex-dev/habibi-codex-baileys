@@ -1,0 +1,45 @@
+{
+  "name": "habibi-codex-baileys",
+  "version": "1.0.0",
+  "description": "Wrapper @whiskeysockets/baileys v7 dengan dukungan interactiveMessage, nativeFlow button, dan listMessage langsung via API yang mudah.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "lib/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "interactive",
+    "nativeflow",
+    "button",
+    "multi-device"
+  ],
+  "author": "habibi-codex",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc13"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@whiskeysockets/baileys": ">=6.7.0"
+  }
+}
